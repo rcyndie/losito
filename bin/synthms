@@ -82,7 +82,7 @@ def timestamp(mjds):
     -------
     date: date string
     """
-    jd = Time(mjds, format='mjd')
+    jd = Time(mjds / (3600. * 24.), format='mjd')
     year = jd.to_datetime().year
     month = jd.to_datetime().month
     day = jd.to_datetime().day
