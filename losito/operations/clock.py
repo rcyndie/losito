@@ -44,8 +44,7 @@ def get_station_delay(times, clockAmp, clockOffset, clockOmega):
     clockAmp = np.random.normal(0.0, clockAmp)
     clockOffset = np.random.normal(0.0, clockOffset)
     clockOmega = np.random.normal(loc = clockOmega, scale = 0.15 * clockOmega)
-    # t0 = 57600*np.random.random()
-    t0 = 0
+    t0 = 57600*np.random.random()
     delay = clockAmp*np.sin(clockOmega*np.pi*(time_delta - t0)/7200) + clockOffset
     return delay
 
